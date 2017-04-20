@@ -1,5 +1,6 @@
 package com.example.giannisavini.lab07big;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.provider.BaseColumns;
 
@@ -53,6 +54,15 @@ public class Contact implements BaseColumns {
 
     public String getEmail() {
         return email;
+    }
+
+    public ContentValues getContentValues() {
+        ContentValues cv = new ContentValues();
+        cv.put(COLUMN_NAME, this.name);
+        cv.put(COLUMN_SURNAME, this.surname);
+        cv.put(COLUMN_NUMBER, this.number);
+        cv.put(COLUMN_EMAIL, this.email);
+        return cv;
     }
 
     @Override
