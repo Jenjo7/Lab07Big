@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(edtUser.getText().toString().isEmpty() ||
+                if (edtUser.getText().toString().isEmpty() ||
                         edtPassword.getText().toString().isEmpty()) {
                     new AlertDialog.Builder(MainActivity.this)
                             .setTitle("Empty field!")
